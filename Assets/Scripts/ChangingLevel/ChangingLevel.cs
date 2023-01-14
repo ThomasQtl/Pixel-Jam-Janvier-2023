@@ -30,6 +30,10 @@ public class ChangingLevel : MonoBehaviour
             {
 				SceneManager.LoadScene("Niveau3");
 			}
+            else
+            {
+                SceneManager.LoadScene("MenuFin");
+            }
         }
     }
 }
