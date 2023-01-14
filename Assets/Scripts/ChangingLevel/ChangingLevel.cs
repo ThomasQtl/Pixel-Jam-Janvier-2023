@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class ChangingLevel : MonoBehaviour
 {
-    public bool IsArrived { get; set; }
+    private Rigidbody2D player;
+    private int finishLine;
 
     // Start is called before the first frame update
     void Start()
     {
-        IsArrived = false;
-    }
+		player = GetComponent<Rigidbody2D>();
+        finishLine = 500;   // A adapter en conséquence
+	}
 
     // Update is called once per frame
     void Update()
     {
-        if (IsArrived)
+        if (player.position.x > finishLine)
         {
             // Ben il est arrivé, wahou
             if (SceneManager.GetActiveScene().name == "Niveau1")
@@ -28,8 +30,6 @@ public class ChangingLevel : MonoBehaviour
             {
 				SceneManager.LoadScene("Niveau3");
 			}
-
-			IsArrived = false;
-		}
+        }
     }
 }
