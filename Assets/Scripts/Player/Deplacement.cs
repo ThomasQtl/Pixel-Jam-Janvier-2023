@@ -30,8 +30,11 @@ public class Deplacement : MonoBehaviour
         }
         Flip(movement);
         float characterVelocity = Mathf.Abs(movement);
-        print(characterVelocity);
         _animator.SetFloat("Speed", characterVelocity);
+        float characterVelocityY = Mathf.Abs(_rigidbody.velocity.y);
+        _animator.SetFloat("SpeedY", characterVelocityY);
+        if (Input.GetKeyDown("4")) 
+            _animator.SetBool("Death", true);
     }
 
     void Flip(float movement)  

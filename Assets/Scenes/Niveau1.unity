@@ -417,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 180399699}
   timeOffset: 0.2
-  posOffset: {x: 0, y: 3, z: -10}
+  posOffset: {x: 0, y: 2, z: -10}
 --- !u!1 &1716434442
 GameObject:
   m_ObjectHideFlags: 0
