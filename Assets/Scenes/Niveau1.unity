@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160462898}
   m_Layer: 0
-  m_Name: Passe
+  m_Name: Passed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1396,7 +1396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348818949}
   m_Layer: 0
-  m_Name: Futur
+  m_Name: Present
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
