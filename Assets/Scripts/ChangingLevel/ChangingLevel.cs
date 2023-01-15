@@ -23,8 +23,12 @@ public class ChangingLevel : MonoBehaviour
             // Ben il est arriv�, wahou
             if (SceneManager.GetActiveScene().name == "Niveau1")
             {
-                SceneManager.LoadScene("Niveau2");
+                SceneManager.LoadScene("Niveau1_1");
                 
+			}
+            else if (SceneManager.GetActiveScene().name == "Niveau1_1")
+            {
+				SceneManager.LoadScene("Niveau2");
 			}
             else if (SceneManager.GetActiveScene().name == "Niveau2")
             {
