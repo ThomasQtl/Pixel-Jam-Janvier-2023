@@ -18,26 +18,22 @@ public class ChangingLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (((player.position.x <-86) && (player.position.y > -28) && (player.position.y < -20)) || ((player.position.x <-86) && (player.position.y > -61) && (player.position.y < -54)))
-        {
             // Ben il est arriv�, wahou
-            if (SceneManager.GetActiveScene().name == "Niveau1")
+            if ((SceneManager.GetActiveScene().name == "Niveau1") && (((player.position.x <-86) && (player.position.y > -28) && (player.position.y < -20)) || ((player.position.x <-86) && (player.position.y > -61) && (player.position.y < -54))))
             {
-                SceneManager.LoadScene("Niveau1_1");
-                
+                SceneManager.LoadScene("Niveau1_2");
 			}
-            else if (SceneManager.GetActiveScene().name == "Niveau1_1")
+            else if ((SceneManager.GetActiveScene().name == "Niveau1_2") && (((player.position.x < -64) && (player.position.y > -28) && (player.position.y < -20)) || ((player.position.x <-64) && (player.position.y > -61) && (player.position.y < -54))))
             {
 				SceneManager.LoadScene("Niveau2");
 			}
-            else if (SceneManager.GetActiveScene().name == "Niveau2")
+            else if ((SceneManager.GetActiveScene().name == "Niveau2") && false)
             {
 				SceneManager.LoadScene("Niveau3");
 			}
-            else
+            else if (false)
             {
                 SceneManager.LoadScene("MenuFin");
             }
-        }
     }
 }
