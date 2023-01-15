@@ -12,7 +12,7 @@ public class ChangingLevel : MonoBehaviour
     void Start()
     {
 		player = GetComponent<Rigidbody2D>();
-        finishLine = 500;   // A adapter en conséquence
+        finishLine = 14;   // A adapter en consï¿½quence
 	}
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class ChangingLevel : MonoBehaviour
     {
         if (player.position.x > finishLine)
         {
-            // Ben il est arrivé, wahou
+            // Ben il est arrivï¿½, wahou
             if (SceneManager.GetActiveScene().name == "Niveau1")
             {
                 SceneManager.LoadScene("Niveau2");

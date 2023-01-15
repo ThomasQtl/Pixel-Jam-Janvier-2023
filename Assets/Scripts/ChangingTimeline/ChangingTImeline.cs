@@ -6,29 +6,29 @@ public class ChangingTImeline : MonoBehaviour
 {
     private Rigidbody2D player;
 
-	public bool IsTimeTraveling { get; set; }   // Pour savoir si on est dans le présent ou le passsé
+	public bool IsTimeTraveling { get; set; }   // Pour savoir si on est dans le prï¿½sent ou le passsï¿½
 
     // Start is called before the first frame update
     void Start()
     {
         IsTimeTraveling = false;
         player = GetComponent<Rigidbody2D>();
+        player.position = new Vector3(player.position.x, -2f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4)) && IsTimeTraveling == false)
+        if (Input.GetKeyDown(KeyCode.Keypad4) && !IsTimeTraveling)
         {
-            float posY = 100;   // A modifier en conséquence
-
-            player.position.Set(player.position.x, posY);
+            print("Dedans");
+            IsTimeTraveling = true;
+            player.position = new Vector3(player.position.x, -20.3f, 0f);
         }
-        else if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4)) && IsTimeTraveling == true) { }
+        else if (Input.GetKeyDown(KeyCode.Keypad4) && IsTimeTraveling)
         {
-			float posY = 0;     // A modifier en conséquence
-
-			player.position.Set(player.position.x, posY);
+            IsTimeTraveling = false;
+            player.position = new Vector3(player.position.x, -2f, 0f);
 		}
     }
 }

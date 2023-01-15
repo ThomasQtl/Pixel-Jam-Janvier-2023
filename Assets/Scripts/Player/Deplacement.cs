@@ -33,7 +33,7 @@ public class Deplacement : MonoBehaviour
         _animator.SetFloat("Speed", characterVelocity);
         float characterVelocityY = Mathf.Abs(_rigidbody.velocity.y);
         _animator.SetFloat("SpeedY", characterVelocityY);
-        if (Input.GetKeyDown("4")) 
+        if (Input.GetKeyDown(KeyCode.Keypad5)) 
             _animator.SetBool("Death", true);
     }
 
