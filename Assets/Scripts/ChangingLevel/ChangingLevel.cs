@@ -27,7 +27,7 @@ public class ChangingLevel : MonoBehaviour
             {
 				SceneManager.LoadScene("Niveau2");
 			}
-            else if ((SceneManager.GetActiveScene().name == "Niveau2") && false)
+            else if ((SceneManager.GetActiveScene().name == "Niveau2") && (((player.position.x < -88) && (player.position.y > -28) && (player.position.y < -20)) || ((player.position.x <-88) && (player.position.y > -61) && (player.position.y < -54))))
             {
 				SceneManager.LoadScene("Niveau2_2");
 			}
