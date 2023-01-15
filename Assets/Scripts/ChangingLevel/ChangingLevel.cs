@@ -31,7 +31,7 @@ public class ChangingLevel : MonoBehaviour
             {
 				SceneManager.LoadScene("Niveau2_2");
 			}
-            else if (false)
+            else if ((SceneManager.GetActiveScene().name == "Niveau2_2") && (player.position.x > 16))
             {
                 SceneManager.LoadScene("MenuFin");
             }
