@@ -13,21 +13,21 @@ public class ChangingTImeline : MonoBehaviour
     {
         IsTimeTraveling = false;
         player = GetComponent<Rigidbody2D>();
-        player.position = new Vector3(player.position.x, -2f, 0f);
+        player.position = new Vector3(-42.82f, -24.95f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) && !IsTimeTraveling)
+        if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) && !IsTimeTraveling) //Passé
         {
             IsTimeTraveling = true;
-            player.position = new Vector3(player.position.x, -20.3f, 0f);
+            player.position = new Vector3(player.position.x, -58.89f, 0f);
         }
-        else if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) && IsTimeTraveling)
+        else if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) && IsTimeTraveling) //Présent
         {
             IsTimeTraveling = false;
-            player.position = new Vector3(player.position.x, -2f, 0f);
+            player.position = new Vector3(player.position.x, -24.95f, 0f);
 		}
     }
 }

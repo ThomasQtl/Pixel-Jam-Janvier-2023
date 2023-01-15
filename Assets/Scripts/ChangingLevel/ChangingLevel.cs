@@ -18,7 +18,7 @@ public class ChangingLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x > finishLine)
+        if (((player.position.x <-86) && (player.position.y > -28) && (player.position.y < -20)) || ((player.position.x <-86) && (player.position.y > -61) && (player.position.y < -54)))
         {
             // Ben il est arriv�, wahou
             if (SceneManager.GetActiveScene().name == "Niveau1")
