@@ -19,13 +19,12 @@ public class ChangingTImeline : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad4) && !IsTimeTraveling)
+        if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) && !IsTimeTraveling)
         {
-            print("Dedans");
             IsTimeTraveling = true;
             player.position = new Vector3(player.position.x, -20.3f, 0f);
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad4) && IsTimeTraveling)
+        else if ((Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) && IsTimeTraveling)
         {
             IsTimeTraveling = false;
             player.position = new Vector3(player.position.x, -2f, 0f);
